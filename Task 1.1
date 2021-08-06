@@ -1,0 +1,30 @@
+//TASKM1.T1P
+
+//Pins
+int led = 3;
+int Msensor = 4;
+
+//Globals
+int led_state = LOW;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(Msensor, INPUT);
+  pinMode(led , OUTPUT);
+  
+}
+
+void loop()
+{
+  if (digitalRead(4) == HIGH) {
+   Serial.println("Active");
+   digitalWrite(3, HIGH);
+   delay(1000);
+  }
+  else {
+    Serial.println("Inactive");
+    digitalWrite(3, LOW);
+    delay(1000); 
+  }
+}  
